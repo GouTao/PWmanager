@@ -1,0 +1,304 @@
+*{
+	outline: none;
+	box-sizing: border-box;
+}
+
+/***button***/
+.Hbtn{
+	background-color: rgba(0,0,0,0);
+	border: 1px solid #0099FF;
+	border-radius: 5px;
+	color: #0099FF;
+	padding: 8px 15px;
+	cursor: pointer;
+	display: inline;
+	font-size: 14px;
+    line-height: initial
+}
+.Hbtn-block{
+	display: block;
+	margin: auto;
+	padding: 8px 25px;
+}
+.Hbtn:hover{
+	background-color: #0099FF;
+	color: white;
+	border-color: #0099FF;
+}
+.Hbtn-default{
+	border: 1px solid #CCCCCC;
+	color: #CCCCCC;
+}
+.Hbtn-default:hover{
+	background-color: #CCCCCC;
+	border-color: #CCCCCC;
+}
+.Hbtn-success{
+	border: 1px solid #33CCCC;
+	color: #33CCCC;
+}
+.Hbtn-success:hover{
+	background-color: #33CCCC;
+	border-color: #33CCCC;
+}
+.Hbtn-danger{
+	border: 1px solid #CC3333;
+	color: #CC3333;
+}
+.Hbtn-danger:hover{
+	background-color: #CC3333;
+	border-color: #CC3333;
+}
+.Hbtn-warning{
+	border: 1px solid #FF9933;
+	color: #FF9933;
+}
+.Hbtn-warning:hover{
+	background-color: #FF9933;
+	border-color: #FF9933;
+}
+/***input***/
+.Hinput{
+	height: 33px;
+	line-height: 33px;
+	padding:2px 5px;
+	border: 1px #0099FF solid;
+	color: #0099FF;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.Hinput-succecss{
+	border-color: #33CCCC;
+	color: #33CCCC;
+}
+.Hinput-danger{
+	border-color: #CC3333;
+	color: #CC3333;
+}
+.Hinput-warning{
+	border-color: #FF9933;
+	color: #FF9933;
+}
+/***select***/
+.Hselect{
+	border: 1px solid #0099FF;
+	border-radius: 3px;
+	color: #0099FF;
+	height: 33px;
+	line-height: 33px;
+	padding: 5px 15px;
+	cursor: pointer;
+}
+/***radio***/
+.Hradio{
+	position: relative;
+	cursor: pointer;
+	color: #0099ff;
+	font-size: 0.8em;
+	user-select:none;
+	-webkit-user-select:none;
+}
+.Hradio:before{
+	content: "";
+	height: 10px;
+	width: 10px;
+	border-radius: 10px;
+	border: 2px solid #0099FF;
+	display: block;
+	position: absolute;
+	left: 4px;
+	top: -3px;
+}
+/***checkbox***/
+.Hcheckbox{
+	position: relative;
+	cursor: pointer;
+	color: #0099ff;
+	font-size: 0.8em;
+	user-select:none;
+	-webkit-user-select:none;
+}
+.Hcheckbox:before{
+	content: "";
+	height: 10px;
+	width: 10px;
+	border-radius: 4px;
+	border: 2px solid #0099FF;
+	display: block;
+	position: absolute;
+	left: 3px;
+	top: -3px;
+}
+/***Hgroup-inline***/
+.Hgroup-inline{
+	height: 34px;
+	line-height: 34px;
+	display: table;
+	width: 100%;
+}
+.Hgroup-inline:after{
+	content:"";
+	clear: both;
+	display: block;
+}
+.Hgroup-inline *{
+	display: table-cell;
+	vertical-align: middle;
+}
+.Hgroup-inline span[class*='Hgroup-btn-']{
+	position: relative;
+    font-size: 0;
+    white-space: nowrap;
+    width: 1%;
+}
+.Hgroup-btn-front button{
+	border-top-right-radius:0 ;
+	border-bottom-right-radius:0 ;
+	height: 33px;
+}
+.Hgroup-btn-last button{
+	border-radius: 0;
+	border-right: none;
+	height: 33px;
+}
+.Hgroup-btn-last:last-of-type button{
+	border-radius: 5px;
+	border-top-left-radius:0 ;
+	border-bottom-left-radius:0 ;
+	border-right: 1px solid;
+}
+.Hgroup-inline input{
+	position: relative;
+    z-index: 2;
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 1px;
+    border-radius: 0;
+    border-left-width: 0px;
+    border-right-width: 0px;
+}
+.Hgroup-inline input:last-child{
+	border-top-left-radius:0 ;
+	border-bottom-left-radius:0 ;
+	border-top-right-radius:3px ;
+	border-bottom-right-radius:3px ;
+	border-right-width: 1px;
+	border-left: none;
+}
+.Hgroup-inline input:first-child{
+	border-top-right-radius:0 ;
+	border-bottom-right-radius:0 ;
+	border-top-left-radius:3px ;
+	border-bottom-left-radius:3px ;
+	border-left-width: 1px;
+	border-right:none;
+}
+/***tab***/
+.Htab{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	position: relative;
+}
+.Htab-nav{
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid #CCCCCC;
+}
+.Htab-nav:after{
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+}
+.Htab-nav li{
+	display: block;
+	height: 30px;
+	line-height: 20px;
+	padding: 4px 10px;
+	width: 100px;
+	float: left;
+	vertical-align: middle;
+	text-align: center;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	cursor: pointer;
+	color: #bbbbbb;
+	word-break:keep-all;          
+	white-space:nowrap;         
+	overflow:hidden;               
+	text-overflow:ellipsis;  
+}
+.Htab-nav li.active{
+	border: 1px solid #CCCCCC;
+	background-color: white;
+	color: #666666;
+	border-bottom: none;
+}
+.Htab-nav li:hover{
+	background-color: #EEEEEE;
+	border-color: #EEEEEE;
+	color: #999999;
+}
+.Htab-page{
+	display: none;
+}
+.Htab-page.active{
+	display: block;
+}
+.Htab-drap{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.Htab-drap-btncontent{
+	text-align: right;
+}
+.Htab-drap-btncontent button{
+	height: 30px;
+	border-radius: 0;
+	border-bottom: none;
+}
+.Htab-drap-nav{
+	margin: 0;
+	padding: 0;
+	border: 1px solid #CCCCCC;
+	padding: 5px;
+}
+.Htab-drap-nav li{
+	display: block;
+	height: 30px;
+	line-height: 20px;
+	padding: 4px 10px;
+	width: 100px;
+	vertical-align: middle;
+	text-align: center;
+	cursor: pointer;
+	color: #bbbbbb;
+	border-bottom: 1px solid #bbbbbb;
+	word-break:keep-all;          
+	white-space:nowrap;         
+	overflow:hidden;               
+	text-overflow:ellipsis;  
+}
+/***common***/
+.unable{
+	pointer-events: none;
+	background-color: #CCCCCC;
+	border-color: #CCCCCC;
+	color:white;
+}
+hr{
+	color: #CCCCCC;
+	border: none;
+	border-top: 1px solid #0099FF;
+}
+.Hlabel{
+	font-size: 0.8em;
+	color: #666666;
+}
+H4{
+	margin: 0;
+	color: #666666;
+}

@@ -10,8 +10,100 @@
 		<link rel="stylesheet" href="HPCF/HStyle.css" />
 		<link rel="stylesheet" href="HPCF/HConfirm.css" />
 		<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
+		<div data-role="page" id="page-recoverPassword">
+			<div data-role="content" class="VMcontent">
+				<div class="VMinner">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-6 col-sm-offset-3">
+								<div class="title">
+									<h3>Recover password</h3>
+								</div>
+								<form role="form">
+									<div class="form-group">
+										<label>Your password question is：</label>
+										<input class="form-control" readonly="readonly" value="Your mother's name?"/>
+									</div>
+									<div class="form-group">
+										<label>Your answer is：</label>
+										<input class="form-control"></input>
+									</div>
+								</form>
+								<button class="Hbtn Hbtn-success"><i class="fa fa-check-circle-o"></i>&nbsp;OK</button>&nbsp;&nbsp;&nbsp;&nbsp;
+								<button class="Hbtn Hbtn-warning"><i class="fa fa-times-circle-o"></i>&nbsp;Reset</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-role="page" id="page-login">
+			<div data-role="content" class="VMcontent">
+				<div class="VMinner">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-6 col-sm-offset-3">
+								<div class="title">
+									<h3>Login</h3>
+								</div>
+								<form role="form">
+									<div class="form-group">
+										<label>Input your password：</label>
+										<input class="form-control"/>
+									</div>
+								</form>
+								<button class="Hbtn Hbtn-success"><i class="fa fa-check-circle-o"></i>&nbsp;Enter PWmanager</button>
+								<div class="forgetPasswordContent">
+									<span id="forgetPassword">Forget password?</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-role="page" id="page-firstLogin">
+			<div data-role="content" class="VMcontent">
+				<div class="VMinner">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-6 col-sm-offset-3">
+								<div class="title">
+									<h3>Login first time</h3>
+									<h4>Set your password</h4>
+								</div>
+								<form role="form">
+									<div class="form-group">
+										<label>Input password：</label>
+										<input class="form-control" />
+									</div>
+									<div class="form-group">
+										<label>Confirm password：</label>
+										<input class="form-control" />
+									</div>
+									<div class="form-group">
+										<label>Password question：</label>
+										<select class="form-control">
+											<option>-Select one-</option>
+											<option>Your mother's name?</option>
+											<option>Your dad's name?</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label>Answer of password question：</label>
+										<input class="form-control" />
+									</div>
+								</form>
+								<button class="Hbtn Hbtn-success"><i class="fa fa-check-circle-o"></i>&nbsp;OK</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		
 		<script type="text/javascript" src="bootstrap-3.3.5-dist/js/jquery.min.js" ></script>
 		<script type="text/javascript" src="bootstrap-3.3.5-dist/js/bootstrap.min.js" ></script>

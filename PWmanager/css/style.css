@@ -1,0 +1,30 @@
+*{
+	font-family: "微软雅黑";
+	
+}
+.title *{
+	text-align: left;
+	font-weight: lighter;
+}
+.title{
+	margin-bottom: 30px;
+}
+form[role="form"] *{
+	text-align: left;
+	font-weight: lighter;
+}
+form[role="form"] select{
+	display: block;
+	width: 100%;
+}
+.forgetPasswordContent{
+	margin-top: 10px;
+	text-align: center;
+}
+#forgetPassword{
+	font-weight: lighter;
+	color: #0099FF;
+	font-size: 0.8em;
+
+	cursor: pointer;
+}

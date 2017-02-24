@@ -11,6 +11,8 @@
 		<link rel="stylesheet" href="HPCF/HConfirm.css" />
 		<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" />
 		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="nprogress/nprogress.css" />
+		<script type="text/javascript" src="nprogress/nprogress.js" ></script>
 	</head>
 	<body>
 		<div data-role="page" id="page-wait">
@@ -138,11 +140,12 @@
 		<script type="text/javascript" src="vueJS/vue.js" ></script>
 		
 		<script>
+			NProgress.configure({ showSpinner: false });
+			NProgress.start()
 			$(function(){
+				NProgress.done()
 				$(".faceLogo").show().addClass("fadeIn");
-				$Xframe.loadShow();
 				setTimeout(function(){
-					$Xframe.loadHide();
 					$Xframe.to("page-firstLogin")
 				},1000)
 			})

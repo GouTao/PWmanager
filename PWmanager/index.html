@@ -13,52 +13,13 @@
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
-		<div data-role="page" id="page-recoverPassword">
+		<div data-role="page" id="page-wait">
 			<div data-role="content" class="VMcontent">
 				<div class="VMinner">
 					<div class="container">
 						<div class="row">
-							<div class="col-sm-6 col-sm-offset-3">
-								<div class="title">
-									<h3>Recover password</h3>
-								</div>
-								<form role="form">
-									<div class="form-group">
-										<label>Your password question is：</label>
-										<input class="form-control" readonly="readonly" value="Your mother's name?"/>
-									</div>
-									<div class="form-group">
-										<label>Your answer is：</label>
-										<input class="form-control"></input>
-									</div>
-								</form>
-								<button class="Hbtn Hbtn-success"><i class="fa fa-check-circle-o"></i>&nbsp;OK</button>&nbsp;&nbsp;&nbsp;&nbsp;
-								<button class="Hbtn Hbtn-warning"><i class="fa fa-times-circle-o"></i>&nbsp;Reset</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div data-role="page" id="page-login">
-			<div data-role="content" class="VMcontent">
-				<div class="VMinner">
-					<div class="container">
-						<div class="row">
-							<div class="col-sm-6 col-sm-offset-3">
-								<div class="title">
-									<h3>Login</h3>
-								</div>
-								<form role="form">
-									<div class="form-group">
-										<label>Input your password：</label>
-										<input class="form-control"/>
-									</div>
-								</form>
-								<button class="Hbtn Hbtn-success"><i class="fa fa-check-circle-o"></i>&nbsp;Enter PWmanager</button>
-								<div class="forgetPasswordContent">
-									<span id="forgetPassword">Forget password?</span>
-								</div>
+							<div class="col-sm-4 col-sm-offset-4">
+								<img src="img/middle-logo.png" class="animated faceLogo"/>
 							</div>
 						</div>
 					</div>
@@ -66,11 +27,14 @@
 			</div>
 		</div>
 		<div data-role="page" id="page-firstLogin">
+			<div data-role="header" class="withLogo">
+				<h4><img src="img/middle-logo.png"/></h4>
+			</div>
 			<div data-role="content" class="VMcontent">
 				<div class="VMinner">
 					<div class="container">
 						<div class="row">
-							<div class="col-sm-6 col-sm-offset-3">
+							<div class="col-sm-4 col-sm-offset-4">
 								<div class="title">
 									<h3>Login first time</h3>
 									<h4>Set your password</h4>
@@ -97,7 +61,68 @@
 										<input class="form-control" />
 									</div>
 								</form>
-								<button class="Hbtn Hbtn-success"><i class="fa fa-check-circle-o"></i>&nbsp;OK</button>
+								<button class="Hbtn Hbtn-success" data-role="page-lead" data-target="page-login"><i class="fa fa-check-circle-o"></i>&nbsp;OK</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-role="page" id="page-login">
+			<div data-role="header" class="withLogo">
+				<h4><img src="img/middle-logo.png"/></h4>
+			</div>
+			<div data-role="content" class="VMcontent">
+				<div class="VMinner">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-4 col-sm-offset-4">
+								<div class="title">
+									<h3>Login</h3>
+								</div>
+								<form role="form">
+									<div class="form-group">
+										<label>Input your password：</label>
+										<input class="form-control"/>
+									</div>
+								</form>
+								<button class="Hbtn Hbtn-success"><i class="fa fa-check-circle-o"></i>&nbsp;Enter PW·M</button>
+								<div class="forgetPasswordContent">
+									<span id="forgetPassword" data-role="page-lead" data-target="page-recoverPassword">Forget password?</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-role="page" id="page-recoverPassword">
+			<div data-role="header" class="withLogo">
+				<h4><img src="img/middle-logo.png"/></h4>
+				<div class="btn-head-left" data-role="page-lead" data-target="page-login" data-direction="reverse">
+					<span><i class="fa fa-angle-left"></i></span>
+				</div>
+			</div>
+			<div data-role="content" class="VMcontent">
+				<div class="VMinner">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-4 col-sm-offset-4">
+								<div class="title">
+									<h3>Recover password</h3>
+								</div>
+								<form role="form">
+									<div class="form-group">
+										<label>Your password question is：</label>
+										<input class="form-control" readonly="readonly" value="Your mother's name?"/>
+									</div>
+									<div class="form-group">
+										<label>Your answer is：</label>
+										<input class="form-control"></input>
+									</div>
+								</form>
+								<button class="Hbtn Hbtn-success" data-role="page-lead" data-target="page-login" data-direction="reverse"><i class="fa fa-check-circle-o"></i>&nbsp;OK</button>&nbsp;&nbsp;&nbsp;&nbsp;
+								<button class="Hbtn Hbtn-warning"><i class="fa fa-times-circle-o"></i>&nbsp;Reset</button>
 							</div>
 						</div>
 					</div>
@@ -105,10 +130,22 @@
 			</div>
 		</div>
 		
+		
 		<script type="text/javascript" src="bootstrap-3.3.5-dist/js/jquery.min.js" ></script>
 		<script type="text/javascript" src="bootstrap-3.3.5-dist/js/bootstrap.min.js" ></script>
 		<script type="text/javascript" src="HPCF/HConfirm.js" ></script>
 		<script type="text/javascript" src="XMBF/Xframe.js" ></script>
 		<script type="text/javascript" src="vueJS/vue.js" ></script>
+		
+		<script>
+			$(function(){
+				$(".faceLogo").show().addClass("fadeIn");
+				$Xframe.loadShow();
+				setTimeout(function(){
+					$Xframe.loadHide();
+					$Xframe.to("page-firstLogin")
+				},1000)
+			})
+		</script>
 	</body>
 </html>

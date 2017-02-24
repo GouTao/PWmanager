@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>拖动DIV</title> 
+<style type="text/css"> 
+.show{ 
+background:#7cd2f8; 
+width:100px; 
+height:100px; 
+text-align:center; 
+position:fixed; 
+z-index:1; 
+left:100px; 
+top:100px; 
+cursor: pointer;
+} 
+.show img{
+	width: 100%;
+	-webkit-user-select: auto;
+}
+
+</style> 
+<script type="text/javascript" src="bootstrap-3.3.5-dist/js/jquery.min.js" ></script>
+<script type="text/javascript">
+$(document).ready(function() { 
+	$(".show").mousedown(function(e){
+		var moveOffset = $(this).offset();
+		var movex = e.pageX - moveOffset.left;
+		var moveY = e.pageY - moveOffset.top;
+		$(document).bind("mousemove",function(evt){ 
+			$(".show").stop();
+			var _x = evt.pageX - movex;
+			var _y = evt.pageY - moveY;
+			
+			$(".show").animate({left:_x+"px",top:_y+"px"},10); 
+		}); 
+	
+	}); 
+
+	$(document).mouseup(function(){ 
+		$(this).unbind("mousemove"); 
+	}) 
+}) 
+
+// --></script> 
+</head> 
+<body> 
+<div class="show"> 
+	<img ondragstart="return false;" src="bootstrap-3.3.5-dist/Map.png" />
+	<iframe src="index.html"></iframe>
+</div> 
+</body> 
+</html> 

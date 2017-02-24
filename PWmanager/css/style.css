@@ -25,6 +25,17 @@ form[role="form"] select{
 	font-weight: lighter;
 	color: #0099FF;
 	font-size: 0.8em;
-
 	cursor: pointer;
+}
+.faceLogo{
+	width: 100%;
+	margin-bottom: 50px;
+	display: none;
+}
+.withLogo h4 img{
+	height: 30px;
+	
+}
+.withLogo h4{
+	margin-top: 11px;
 }
